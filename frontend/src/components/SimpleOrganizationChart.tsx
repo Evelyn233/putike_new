@@ -107,6 +107,16 @@ const SimpleOrganizationChart: React.FC = () => {
           avatar: '👨‍🎓',
           description: '构建专业知识体系，形成结构化的知识图谱',
           capabilities: ['知识管理', '体系构建', '专业研究']
+        },
+        {
+          id: 'shunde-food-guide',
+          name: '顺德美食旅游攻略',
+          role: '美食旅游顾问',
+          specialization: '顺德美食专家',
+          department: 'wisdom',
+          avatar: '🍜',
+          description: '提供专业的顺德美食旅游攻略，带你吃遍顺德特色美食，配图版详细指南',
+          capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略']
         }
       ]
     },
@@ -119,8 +129,8 @@ const SimpleOrganizationChart: React.FC = () => {
       agents: [
         {
           id: 'title-generator',
-          name: 'AI标题生成助手',
-          role: 'AI标题生成助手',
+          name: 'FEEKR标题生成助手',
+          role: 'FEEKR标题生成助手',
           specialization: '腾讯元器',
           department: 'creation',
           avatar: '⚡',
@@ -128,6 +138,18 @@ const SimpleOrganizationChart: React.FC = () => {
           capabilities: ['智能标题生成', '多风格输出', '点击率优化', '关键词提取'],
           isExternal: true,
           externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/kVZmRQ?appid=1979017835515638528&experience=true'
+        },
+        {
+          id: 'taste-title-generator',
+          name: '寻味标题智能体',
+          role: '寻味标题智能体',
+          specialization: '美食标题专家',
+          department: 'creation',
+          avatar: '🍴',
+          description: '专注美食领域的标题创作，结合美食文化和旅游体验，打造吸引眼球的美食标题',
+          capabilities: ['美食标题', '文化融合', '旅游体验', '吸引力优化'],
+          isExternal: true,
+          externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/QTWTsO?appid=1979009080824591104&experience=true'
         },
         {
           id: 'traffic-capture-1',

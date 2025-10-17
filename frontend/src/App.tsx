@@ -27,7 +27,7 @@ function App() {
         borderTop: '1px solid rgba(255, 255, 255, 0.1)',
         padding: '24px 50px',
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
         color: '#ffffff',
         backdropFilter: 'blur(20px)',
@@ -36,12 +36,7 @@ function App() {
       }}>
         <div>
           <Text style={{ color: '#ffffff', fontSize: '14px', lineHeight: '1.5' }}>
-            (联方式 16.9-2364 | 联系方向 | 联系方式 U1165354006 Copy/ghi Mapemilcold, Seetaie-610599)
-          </Text>
-        </div>
-        <div>
-          <Text style={{ color: '#ffffff', fontSize: '14px' }}>
-            豆包AI生成
+            © 2025 PUTIKE & FEEKR. All rights reserved.
           </Text>
         </div>
       </Footer>

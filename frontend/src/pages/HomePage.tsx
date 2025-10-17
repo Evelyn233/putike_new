@@ -27,28 +27,9 @@ const HomePage = () => {
   const navigate = useNavigate()
   const { agents, setAgents } = useArticleStore()
   const [selectedAgent, setSelectedAgent] = useState<AgentInfo | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [selectedOrgAgent, setSelectedOrgAgent] = useState<OrgAgent | null>(null)
   const [isModalVisible, setIsModalVisible] = useState(false)
-
-  useEffect(() => {
-    loadAgents()
-  }, [])
-
-  const loadAgents = async () => {
-    try {
-      setLoading(true)
-      const data = await agentsApi.listAgents()
-      setAgents(data)
-      if (data.length > 0) {
-        setSelectedAgent(data[0])
-      }
-    } catch (error) {
-      message.error('加载智能体失败')
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const handleArticleCreated = (articleId: number) => {
     // 跳转到文章详情页
@@ -138,10 +119,20 @@ const HomePage = () => {
       description: '构建专业知识体系，形成结构化的知识图谱',
       capabilities: ['知识管理', '体系构建', '专业研究']
     },
+    shundeFoodGuide: {
+      id: 'shunde-food-guide',
+      name: '顺德美食旅游攻略',
+      role: '美食旅游顾问',
+      specialization: '顺德美食专家',
+      department: 'wisdom',
+      avatar: '🍜',
+      description: '提供专业的顺德美食旅游攻略，带你吃遍顺德特色美食，配图版详细指南',
+      capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略']
+    },
     titleGenerator: {
       id: 'title-generator',
-      name: 'AI标题生成助手',
-      role: 'AI标题生成助手',
+      name: 'FEEKR标题生成助手',
+      role: 'FEEKR标题生成助手',
       specialization: '腾讯元器',
       department: 'creation',
       avatar: '⚡',
@@ -149,6 +140,18 @@ const HomePage = () => {
       capabilities: ['智能标题生成', '多风格输出', '点击率优化', '关键词提取'],
       isExternal: true,
       externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/kVZmRQ?appid=1979017835515638528&experience=true'
+    },
+    tasteTitleGenerator: {
+      id: 'taste-title-generator',
+      name: '寻味标题智能体',
+      role: '寻味标题智能体',
+      specialization: '美食标题专家',
+      department: 'creation',
+      avatar: '🍴',
+      description: '专注美食领域的标题创作，结合美食文化和旅游体验，打造吸引眼球的美食标题',
+      capabilities: ['美食标题', '文化融合', '旅游体验', '吸引力优化'],
+      isExternal: true,
+      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/QTWTsO?appid=1979009080824591104&experience=true'
     },
     trafficCapture: {
       id: 'traffic-capture',
@@ -294,7 +297,7 @@ const HomePage = () => {
             maxWidth: '800px',
             margin: '0 auto 15px auto'
           }}>
-            土智精品酒写作为主统的俗,作录,停华视简本直的的豪校進取的的系统
+            基于AI的精品内容创作系统，为您提供专业、高效、个性化的智能写作服务
           </Text>
           <Text style={{ 
             color: '#a8a8a8', 
@@ -304,7 +307,7 @@ const HomePage = () => {
             maxWidth: '600px',
             margin: '0 auto'
           }}>
-            但晟肴能的代的豪华爱体
+            打造属于您的专属AI智能体
           </Text>
           
           {/* 视频控制按钮 */}
@@ -475,7 +478,7 @@ const HomePage = () => {
                 </Card>
               </Col>
             </Row>
-          </div>
+      </div>
 
           {/* 智慧中枢 */}
           <div style={{ marginBottom: '60px' }}>
@@ -486,7 +489,7 @@ const HomePage = () => {
               </Title>
               <Text style={{ color: '#764ba2', fontSize: '1rem' }}>知识部门</Text>
             </div>
-            <Row gutter={[24, 24]}>
+      <Row gutter={[24, 24]}>
               <Col xs={24} sm={12} md={8}>
                 <Card
                   hoverable
@@ -613,6 +616,49 @@ const HomePage = () => {
                   </Text>
                 </Card>
               </Col>
+              <Col xs={24} sm={12} md={8}>
+                <Card
+                  hoverable
+                  onClick={() => handleAgentClick(orgAgents.shundeFoodGuide)}
+                  style={{
+                    background: 'rgba(118, 75, 162, 0.15)',
+                    border: '2px solid #764ba2',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(118, 75, 162, 0.3)',
+                    cursor: 'pointer'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#764ba2'
+                  }}>
+                    🍜
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px'
+                  }}>
+                    顺德美食旅游攻略
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    顺德美食专家
+                  </Text>
+                </Card>
+                </Col>
             </Row>
           </div>
 
@@ -673,7 +719,7 @@ const HomePage = () => {
                     fontWeight: '600',
                     marginBottom: '8px'
                   }}>
-                    AI标题生成助手
+                    FEEKR标题生成助手
                   </Text>
                   <Text style={{ 
                     color: '#cccccc', 
@@ -809,6 +855,63 @@ const HomePage = () => {
                   </Text>
                 </Card>
               </Col>
+              <Col xs={24} sm={12} md={6}>
+                <Card
+                  hoverable
+                  onClick={() => handleAgentClick(orgAgents.tasteTitleGenerator)}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%)',
+                    border: '2px solid rgba(245, 87, 108, 0.8)',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(245, 87, 108, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #f093fb, #f5576c)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#f093fb'
+                  }}>
+                    🍴
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px'
+                  }}>
+                    寻味标题智能体
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    美食标题专家
+                  </Text>
+          </Card>
+        </Col>
             </Row>
           </div>
 
@@ -907,7 +1010,7 @@ const HomePage = () => {
                 </Card>
               </Col>
               <Col xs={24} sm={12} md={8}>
-                <Card
+          <Card
                   hoverable
                   style={{
                     background: 'rgba(79, 172, 254, 0.15)',
@@ -931,7 +1034,7 @@ const HomePage = () => {
                     color: '#4facfe'
                   }}>
                     👨‍💻
-                  </div>
+              </div>
                   <Text style={{ 
                     color: '#ffffff', 
                     fontSize: '1.1rem',
@@ -946,9 +1049,9 @@ const HomePage = () => {
                   }}>
                     数据分析
                   </Text>
-                </Card>
-              </Col>
-            </Row>
+          </Card>
+        </Col>
+      </Row>
           </div>
         </div>
 
