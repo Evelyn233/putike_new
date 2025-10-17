@@ -116,7 +116,9 @@ const SimpleOrganizationChart: React.FC = () => {
           department: 'wisdom',
           avatar: '🍜',
           description: '提供专业的顺德美食旅游攻略，带你吃遍顺德特色美食，配图版详细指南',
-          capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略']
+          capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略'],
+          isExternal: true,
+          externalUrl: 'https://space.coze.cn/share/7551670233943392562?share_id=7551676178559582464&secret=MyxY5dR4&from=home_case_list'
         }
       ]
     },

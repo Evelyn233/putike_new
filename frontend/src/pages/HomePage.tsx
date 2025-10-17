@@ -127,7 +127,9 @@ const HomePage = () => {
       department: 'wisdom',
       avatar: '🍜',
       description: '提供专业的顺德美食旅游攻略，带你吃遍顺德特色美食，配图版详细指南',
-      capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略']
+      capabilities: ['美食推荐', '旅游规划', '地道体验', '配图攻略'],
+      isExternal: true,
+      externalUrl: 'https://space.coze.cn/share/7551670233943392562?share_id=7551676178559582464&secret=MyxY5dR4&from=home_case_list'
     },
     titleGenerator: {
       id: 'title-generator',
@@ -286,7 +288,7 @@ const HomePage = () => {
             textShadow: '0 0 30px rgba(255, 215, 0, 0.5)',
             letterSpacing: '2px'
           }}>
-            智能写作
+            璞缇客内容引擎
           </Title>
           <Text style={{ 
             color: '#e0e0e0', 
@@ -297,49 +299,28 @@ const HomePage = () => {
             maxWidth: '800px',
             margin: '0 auto 15px auto'
           }}>
-            基于AI的精品内容创作系统，为您提供专业、高效、个性化的智能写作服务
+            AI智能体协同创作系统
           </Text>
-          <Text style={{ 
-            color: '#a8a8a8', 
-            fontSize: '1.2rem',
-            display: 'block',
-            lineHeight: '1.8',
-            maxWidth: '600px',
-            margin: '0 auto'
-          }}>
-            打造属于您的专属AI智能体
-          </Text>
-          
-          {/* 视频控制按钮 */}
-          <div style={{ marginTop: '40px' }}>
-            <Button
-              type="text"
-              style={{
-                background: 'rgba(0, 0, 0, 0.6)',
-                border: '1px solid rgba(255, 255, 255, 0.3)',
-                color: '#ffffff',
-                borderRadius: '8px',
-                padding: '12px 20px',
-                fontSize: '1rem',
-                fontWeight: '500',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              16:9
-            </Button>
-          </div>
-        </div>
+      </div>
 
         {/* 智能体架构区域 */}
         <div style={{ 
-          maxWidth: '1400px', 
+          maxWidth: '1600px', 
           margin: '0 auto', 
           padding: '0 20px 100px 20px',
           position: 'relative',
           zIndex: 2
         }}>
+          <Row gutter={[40, 40]}>
+            {/* 第一行：人格化引擎 + 智慧中枢 */}
+            <Col xs={24} lg={12}>
           {/* 人格化引擎 */}
-          <div style={{ marginBottom: '60px' }}>
+          <div style={{ 
+            marginBottom: '0',
+            border: '2px solid rgba(102, 126, 234, 0.6)',
+            borderRadius: '24px',
+            padding: '40px 30px'
+          }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>👑</div>
               <Title level={2} style={{ color: '#ffffff', margin: 0 }}>
@@ -379,7 +360,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     创始人价值解码
                   </Text>
@@ -422,7 +406,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     短视频人设建模
                   </Text>
@@ -465,7 +452,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     爆款IP翻译官
                   </Text>
@@ -479,9 +469,16 @@ const HomePage = () => {
               </Col>
             </Row>
       </div>
-
+            </Col>
+            
+            <Col xs={24} lg={12}>
           {/* 智慧中枢 */}
-          <div style={{ marginBottom: '60px' }}>
+          <div style={{ 
+            marginBottom: '0',
+            border: '2px solid rgba(118, 75, 162, 0.6)',
+            borderRadius: '24px',
+            padding: '40px 30px'
+          }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>📚</div>
               <Title level={2} style={{ color: '#ffffff', margin: 0 }}>
@@ -520,7 +517,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     竞品情报分析
                   </Text>
@@ -562,7 +562,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     内容设计
                   </Text>
@@ -604,7 +607,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     知识图谱构建
                   </Text>
@@ -619,10 +625,14 @@ const HomePage = () => {
               <Col xs={24} sm={12} md={8}>
                 <Card
                   hoverable
-                  onClick={() => handleAgentClick(orgAgents.shundeFoodGuide)}
+                  onClick={() => {
+                    if (orgAgents.shundeFoodGuide.externalUrl) {
+                      window.open(orgAgents.shundeFoodGuide.externalUrl, '_blank')
+                    }
+                  }}
                   style={{
-                    background: 'rgba(118, 75, 162, 0.15)',
-                    border: '2px solid #764ba2',
+                    background: 'linear-gradient(135deg, rgba(118, 75, 162, 0.25) 0%, rgba(102, 126, 234, 0.25) 100%)',
+                    border: '2px solid rgba(118, 75, 162, 0.8)',
                     borderRadius: '16px',
                     textAlign: 'center',
                     height: '200px',
@@ -631,11 +641,25 @@ const HomePage = () => {
                     justifyContent: 'center',
                     backdropFilter: 'blur(20px)',
                     transition: 'all 0.3s ease',
-                    boxShadow: '0 8px 32px rgba(118, 75, 162, 0.3)',
-                    cursor: 'pointer'
+                    boxShadow: '0 8px 32px rgba(118, 75, 162, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
                   }}
                   bodyStyle={{ padding: '30px 20px' }}
                 >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #764ba2, #667eea)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
                   <div style={{ 
                     fontSize: '2.5rem', 
                     marginBottom: '15px',
@@ -647,7 +671,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     顺德美食旅游攻略
                   </Text>
@@ -661,9 +688,19 @@ const HomePage = () => {
                 </Col>
             </Row>
           </div>
-
+            </Col>
+          </Row>
+          
+          <Row gutter={[40, 40]}>
+            {/* 第二行：创作工厂 + 决策大脑 */}
+            <Col xs={24} lg={12}>
           {/* 创作工厂 */}
-          <div style={{ marginBottom: '60px' }}>
+          <div style={{ 
+            marginBottom: '0',
+            border: '2px solid rgba(240, 147, 251, 0.6)',
+            borderRadius: '24px',
+            padding: '40px 30px'
+          }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🏭</div>
               <Title level={2} style={{ color: '#ffffff', margin: 0 }}>
@@ -717,7 +754,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     FEEKR标题生成助手
                   </Text>
@@ -759,7 +799,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     流量捕获
                   </Text>
@@ -801,7 +844,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     传播优化
                   </Text>
@@ -843,7 +889,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     多模态制作
                   </Text>
@@ -900,7 +949,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     寻味标题智能体
                   </Text>
@@ -911,62 +963,27 @@ const HomePage = () => {
                     美食标题专家
                   </Text>
           </Card>
-        </Col>
+                </Col>
             </Row>
           </div>
-
+            </Col>
+            
+            <Col xs={24} lg={12}>
           {/* 决策大脑 */}
-          <div style={{ marginBottom: '60px' }}>
+          <div style={{ 
+            marginBottom: '0',
+            border: '2px solid rgba(79, 172, 254, 0.6)',
+            borderRadius: '24px',
+            padding: '40px 30px'
+          }}>
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
               <div style={{ fontSize: '2.5rem', marginBottom: '10px' }}>🧠</div>
               <Title level={2} style={{ color: '#ffffff', margin: 0 }}>
                 决策大脑
               </Title>
-              <Text style={{ color: '#4facfe', fontSize: '1rem' }}>数据部门</Text>
+              <Text style={{ color: '#4facfe', fontSize: '1rem' }}>战略部门</Text>
             </div>
             <Row gutter={[24, 24]}>
-              <Col xs={24} sm={12} md={8}>
-                <Card
-                  hoverable
-                  style={{
-                    background: 'rgba(79, 172, 254, 0.15)',
-                    border: '2px solid #4facfe',
-                    borderRadius: '16px',
-                    textAlign: 'center',
-                    height: '200px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    backdropFilter: 'blur(20px)',
-                    transition: 'all 0.3s ease',
-                    boxShadow: '0 8px 32px rgba(79, 172, 254, 0.3)',
-                    cursor: 'pointer'
-                  }}
-                  bodyStyle={{ padding: '30px 20px' }}
-                >
-                  <div style={{ 
-                    fontSize: '2.5rem', 
-                    marginBottom: '15px',
-                    color: '#4facfe'
-                  }}>
-                    👨‍💻
-                  </div>
-                  <Text style={{ 
-                    color: '#ffffff', 
-                    fontSize: '1.1rem',
-                    fontWeight: '600',
-                    marginBottom: '8px'
-                  }}>
-                    多模态制作
-                  </Text>
-                  <Text style={{ 
-                    color: '#cccccc', 
-                    fontSize: '0.9rem'
-                  }}>
-                    照片推理专家
-                  </Text>
-                </Card>
-              </Col>
               <Col xs={24} sm={12} md={8}>
                 <Card
                   hoverable
@@ -997,7 +1014,10 @@ const HomePage = () => {
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     情报侦察系统
                   </Text>
@@ -1010,7 +1030,7 @@ const HomePage = () => {
                 </Card>
               </Col>
               <Col xs={24} sm={12} md={8}>
-          <Card
+                <Card
                   hoverable
                   style={{
                     background: 'rgba(79, 172, 254, 0.15)',
@@ -1034,12 +1054,15 @@ const HomePage = () => {
                     color: '#4facfe'
                   }}>
                     👨‍💻
-              </div>
+                  </div>
                   <Text style={{ 
                     color: '#ffffff', 
                     fontSize: '1.1rem',
                     fontWeight: '600',
-                    marginBottom: '8px'
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
                   }}>
                     智能决策中枢
                   </Text>
@@ -1049,10 +1072,57 @@ const HomePage = () => {
                   }}>
                     数据分析
                   </Text>
-          </Card>
-        </Col>
-      </Row>
+                </Card>
+              </Col>
+              <Col xs={24} sm={12} md={8}>
+                <Card
+                  hoverable
+                  style={{
+                    background: 'rgba(79, 172, 254, 0.15)',
+                    border: '2px solid #4facfe',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(79, 172, 254, 0.3)',
+                    cursor: 'pointer'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#4facfe'
+                  }}>
+                    📊
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
+                  }}>
+                    数据分析中心
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    战略决策
+                  </Text>
+                </Card>
+              </Col>
+            </Row>
           </div>
+            </Col>
+          </Row>
         </div>
 
         {/* 创作面板 */}
