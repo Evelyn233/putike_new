@@ -1,0 +1,20 @@
+{
+  "name": "ai-writing-platform",
+  "version": "1.0.0",
+  "description": "AI写作平台 - 多智能体写作助手",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "preview": "cd frontend && npm run preview",
+    "install": "cd frontend && npm install"
+  },
+  "keywords": [
+    "ai",
+    "writing",
+    "platform",
+    "multi-agent"
+  ],
+  "author": "",
+  "license": "MIT"
+}
+
