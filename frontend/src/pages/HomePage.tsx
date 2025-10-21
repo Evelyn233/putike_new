@@ -133,8 +133,8 @@ const HomePage = () => {
     },
     titleGenerator: {
       id: 'title-generator',
-      name: 'FEEKR标题生成助手',
-      role: 'FEEKR标题生成助手',
+      name: '璞缇客标题生成助手',
+      role: '璞缇客标题生成助手',
       specialization: '腾讯元器',
       department: 'creation',
       avatar: '⚡',
@@ -154,6 +154,18 @@ const HomePage = () => {
       capabilities: ['美食标题', '文化融合', '旅游体验', '吸引力优化'],
       isExternal: true,
       externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/QTWTsO?appid=1979009080824591104&experience=true'
+    },
+    feekrTitleGenerator: {
+      id: 'feekr-title-generator',
+      name: 'Feekr标题智能体',
+      role: 'Feekr标题智能体',
+      specialization: '腾讯元器',
+      department: 'creation',
+      avatar: '💫',
+      description: '专业的Feekr品牌标题生成智能体，由腾讯元器提供支持，打造符合品牌调性的标题',
+      capabilities: ['品牌标题', '智能生成', '风格定制', '点击优化'],
+      isExternal: true,
+      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/giNyNq?appid=1980487321538287168&experience=true'
     },
     trafficCapture: {
       id: 'traffic-capture',
@@ -759,7 +771,7 @@ const HomePage = () => {
                     whiteSpace: 'normal',
                     wordBreak: 'break-word'
                   }}>
-                    FEEKR标题生成助手
+                    璞缇客标题生成助手
                   </Text>
                   <Text style={{ 
                     color: '#cccccc', 
@@ -964,9 +976,69 @@ const HomePage = () => {
                   </Text>
           </Card>
                 </Col>
+              <Col xs={24} sm={12} md={6}>
+                <Card
+                  hoverable
+                  onClick={() => handleAgentClick(orgAgents.feekrTitleGenerator)}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%)',
+                    border: '2px solid rgba(245, 87, 108, 0.8)',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(245, 87, 108, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #f093fb, #f5576c)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#f093fb'
+                  }}>
+                    💫
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
+                  }}>
+                    Feekr标题智能体
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    腾讯元器
+                  </Text>
+                </Card>
+              </Col>
             </Row>
           </div>
-            </Col>
+        </Col>
             
             <Col xs={24} lg={12}>
           {/* 决策大脑 */}
