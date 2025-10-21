@@ -309,19 +309,19 @@ const ArticleDetailPage = () => {
                     <ReactMarkdown
                       remarkPlugins={[remarkGfm]}
                       components={{
-                        code({node, inline, className, children, ...props}) {
+                        code({node, className, children, ...props}) {
                           const match = /language-(\w+)/.exec(className || '')
-                          return !inline && match ? (
+                          const isInline = props && 'inline' in props ? props.inline : false
+                          return !isInline && match ? (
                             <SyntaxHighlighter
-                              style={tomorrow}
+                              style={tomorrow as any}
                               language={match[1]}
                               PreTag="div"
-                              {...props}
                             >
                               {String(children).replace(/\n$/, '')}
                             </SyntaxHighlighter>
                           ) : (
-                            <code className={className} {...props}>
+                            <code className={className} {...props as any}>
                               {children}
                             </code>
                           )

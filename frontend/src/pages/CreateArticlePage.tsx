@@ -16,7 +16,7 @@ import {
 } from 'antd'
 import { ArrowLeftOutlined, SendOutlined, ReloadOutlined, ThunderboltOutlined } from '@ant-design/icons'
 import { articlesApi } from '../services/api'
-import type { Agent, CreateArticleRequest } from '../types'
+import type { Agent, CreateArticleRequest, AgentType } from '../types'
 
 const { Title, Text, Paragraph } = Typography
 const { TextArea } = Input
@@ -56,7 +56,7 @@ const CreateArticlePage: React.FC = () => {
       const request: CreateArticleRequest = {
         title: values.title,
         topic: values.topic,
-        agent_type: selectedAgent.type,
+        agent_type: 'creative' as AgentType, // 默认使用创意作家类型
         word_count: values.word_count || 1000,
         temperature: values.temperature || 0.7,
         style_requirements: values.style_requirements,
