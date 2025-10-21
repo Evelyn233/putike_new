@@ -27,6 +27,20 @@ export interface AgentInfo {
   model: string
 }
 
+// 组织架构智能体 / Organization Agent
+export interface Agent {
+  id: string
+  name: string
+  role: string
+  specialization: string
+  department: string
+  avatar: string
+  description: string
+  capabilities: string[]
+  isExternal?: boolean
+  externalUrl?: string
+}
+
 // 文章 / Article
 export interface Article {
   id: number

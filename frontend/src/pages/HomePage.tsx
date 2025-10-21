@@ -133,8 +133,8 @@ const HomePage = () => {
     },
     titleGenerator: {
       id: 'title-generator',
-      name: 'FEEKR标题生成助手',
-      role: 'FEEKR标题生成助手',
+      name: '璞缇客标题生成助手',
+      role: '璞缇客标题生成助手',
       specialization: '腾讯元器',
       department: 'creation',
       avatar: '⚡',
@@ -759,7 +759,7 @@ const HomePage = () => {
                     whiteSpace: 'normal',
                     wordBreak: 'break-word'
                   }}>
-                    FEEKR标题生成助手
+                    璞缇客标题生成助手
                   </Text>
                   <Text style={{ 
                     color: '#cccccc', 
