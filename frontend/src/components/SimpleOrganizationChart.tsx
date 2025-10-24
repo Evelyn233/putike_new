@@ -139,7 +139,7 @@ const SimpleOrganizationChart: React.FC = () => {
           description: '专注美食领域的标题创作，结合美食文化和旅游体验，打造吸引眼球的美食标题',
           capabilities: ['美食标题', '文化融合', '旅游体验', '吸引力优化'],
           isExternal: true,
-          externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/QTWTsO?appid=1979009080824591104&experience=true'
+          externalUrl: 'https://yuanqi.tencent.com/v2#/app/knowledge/app-config?read=&appid=1979009080824591104&appType=knowledge_qa'
         },
         {
           id: 'feekr-intro-generator',
