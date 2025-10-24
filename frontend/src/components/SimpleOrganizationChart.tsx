@@ -154,6 +154,18 @@ const SimpleOrganizationChart: React.FC = () => {
           externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/QTWTsO?appid=1979009080824591104&experience=true'
         },
         {
+          id: 'feekr-intro-generator',
+          name: 'Feekr引言智能体',
+          role: 'Feekr引言智能体',
+          specialization: '引言创作专家',
+          department: 'creation',
+          avatar: '✨',
+          description: '专业的引言创作智能体，能够生成吸引人的开头引言，提升文章阅读体验和用户粘性',
+          capabilities: ['引言创作', '开头优化', '吸引力提升', '阅读体验'],
+          isExternal: true,
+          externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/WeHSfY?appid=1980477689380362432&experience=true'
+        },
+        {
           id: 'traffic-capture-1',
           name: '流量捕获',
           role: '流量捕获',

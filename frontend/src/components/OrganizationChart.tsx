@@ -141,6 +141,30 @@ const OrganizationChart: React.FC = () => {
       color: '#f093fb',
       agents: [
         {
+          id: 'title-generator',
+          name: 'FEEKR标题生成助手',
+          role: 'FEEKR标题生成助手',
+          specialization: '腾讯元器',
+          department: 'creation',
+          avatar: '⚡',
+          description: '由腾讯元器提供支持，专业的标题优化智能体。一键生成吸引眼球的标题，多种风格可选，显著提升点击率',
+          capabilities: ['智能标题生成', '多风格输出', '点击率优化', '关键词提取'],
+          isExternal: true,
+          externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/kVZmRQ?appid=1979017835515638528&experience=true'
+        },
+        {
+          id: 'feekr-intro-generator',
+          name: 'Feekr引言智能体',
+          role: 'Feekr引言智能体',
+          specialization: '引言创作专家',
+          department: 'creation',
+          avatar: '✨',
+          description: '专业的引言创作智能体，能够生成吸引人的开头引言，提升文章阅读体验和用户粘性',
+          capabilities: ['引言创作', '开头优化', '吸引力提升', '阅读体验'],
+          isExternal: true,
+          externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/WeHSfY?appid=1980477689380362432&experience=true'
+        },
+        {
           id: 'traffic-capture-1',
           name: '流量捕获',
           role: '流量捕获',
