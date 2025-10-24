@@ -18,6 +18,8 @@ interface Agent {
   avatar: string
   description: string
   capabilities: string[]
+  isExternal?: boolean
+  externalUrl?: string
 }
 
 interface Department {
