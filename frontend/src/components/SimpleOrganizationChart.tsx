@@ -1,21 +1,9 @@
 import React, { useState } from 'react'
 import { Card, Modal, Button, Typography, Space, Row, Col } from 'antd'
 import { RobotOutlined, ThunderboltOutlined } from '@ant-design/icons'
+import { Agent as AgentType } from '../types'
 
 const { Title, Text } = Typography
-
-interface Agent {
-  id: string
-  name: string
-  role: string
-  specialization: string
-  department: string
-  avatar: string
-  description: string
-  capabilities: string[]
-  isExternal?: boolean
-  externalUrl?: string
-}
 
 interface Department {
   id: string
@@ -23,11 +11,11 @@ interface Department {
   subtitle: string
   icon: string
   color: string
-  agents: Agent[]
+  agents: AgentType[]
 }
 
 const SimpleOrganizationChart: React.FC = () => {
-  const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null)
+  const [selectedAgent, setSelectedAgent] = useState<AgentType | null>(null)
   const [isModalVisible, setIsModalVisible] = useState(false)
 
   // 组织架构数据
@@ -238,7 +226,7 @@ const SimpleOrganizationChart: React.FC = () => {
     }
   ]
 
-  const handleAgentClick = (agent: Agent) => {
+  const handleAgentClick = (agent: AgentType) => {
     // 如果是外部链接智能体，直接打开链接
     if (agent.isExternal && agent.externalUrl) {
       window.open(agent.externalUrl, '_blank')

@@ -5,20 +5,10 @@ import AgentAvatar from './AgentAvatar'
 import DepartmentNode from './DepartmentNode'
 import AgentNode from './AgentNode'
 import ConnectionLine from './ConnectionLine'
+import { Agent as AgentType } from '../types'
 import './OrganizationChart.css'
 
 const { Title, Text } = Typography
-
-interface Agent {
-  id: string
-  name: string
-  role: string
-  specialization: string
-  department: string
-  avatar: string
-  description: string
-  capabilities: string[]
-}
 
 interface Department {
   id: string
@@ -26,11 +16,11 @@ interface Department {
   subtitle: string
   icon: string
   color: string
-  agents: Agent[]
+  agents: AgentType[]
 }
 
 const OrganizationChart: React.FC = () => {
-  const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null)
+  const [selectedAgent, setSelectedAgent] = useState<AgentType | null>(null)
   const [isModalVisible, setIsModalVisible] = useState(false)
 
   // 组织架构数据
@@ -357,7 +347,7 @@ const OrganizationChart: React.FC = () => {
     }
   ]
 
-  const handleAgentClick = (agent: Agent) => {
+  const handleAgentClick = (agent: AgentType) => {
     setSelectedAgent(agent)
     setIsModalVisible(true)
   }
