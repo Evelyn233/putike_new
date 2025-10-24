@@ -167,6 +167,30 @@ const HomePage = () => {
       isExternal: true,
       externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/giNyNq?appid=1980487321538287168&experience=true'
     },
+    feekrIntroGenerator: {
+      id: 'feekr-intro-generator',
+      name: 'Feekr引言智能体',
+      role: 'Feekr引言智能体',
+      specialization: '引言创作专家',
+      department: 'creation',
+      avatar: '✨',
+      description: '专业的引言创作智能体，能够生成吸引人的开头引言，提升文章阅读体验和用户粘性',
+      capabilities: ['引言创作', '开头优化', '吸引力提升', '阅读体验'],
+      isExternal: true,
+      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/WeHSfY?appid=1980477689380362432&experience=true'
+    },
+    tastePlanetIntroGenerator: {
+      id: 'taste-planet-intro-generator',
+      name: '寻味星球引言智能体',
+      role: '寻味星球引言智能体',
+      specialization: '美食引言专家',
+      department: 'creation',
+      avatar: '🌍',
+      description: '专业的寻味星球引言创作智能体，专注于美食旅游领域的引言创作，打造引人入胜的美食故事开头',
+      capabilities: ['美食引言', '旅游故事', '文化融合', '情感共鸣'],
+      isExternal: true,
+      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/IWjiGJ?appid=1980513123539008256&experience=true'
+    },
     trafficCapture: {
       id: 'traffic-capture',
       name: '流量捕获',
@@ -778,6 +802,134 @@ const HomePage = () => {
                     fontSize: '0.9rem'
                   }}>
                     腾讯元器
+                  </Text>
+                </Card>
+              </Col>
+              <Col xs={24} sm={12} md={6}>
+                <Card
+                  hoverable
+                  onClick={() => {
+                    if (orgAgents.feekrIntroGenerator.externalUrl) {
+                      window.open(orgAgents.feekrIntroGenerator.externalUrl, '_blank')
+                    }
+                  }}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%)',
+                    border: '2px solid rgba(245, 87, 108, 0.8)',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(245, 87, 108, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #f093fb, #f5576c)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#f093fb'
+                  }}>
+                    ✨
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
+                  }}>
+                    Feekr引言智能体
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    引言创作专家
+                  </Text>
+                </Card>
+              </Col>
+              <Col xs={24} sm={12} md={6}>
+                <Card
+                  hoverable
+                  onClick={() => {
+                    if (orgAgents.tastePlanetIntroGenerator.externalUrl) {
+                      window.open(orgAgents.tastePlanetIntroGenerator.externalUrl, '_blank')
+                    }
+                  }}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%)',
+                    border: '2px solid rgba(245, 87, 108, 0.8)',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(245, 87, 108, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #f093fb, #f5576c)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#f093fb'
+                  }}>
+                    🌍
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
+                  }}>
+                    寻味星球引言智能体
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    美食引言专家
                   </Text>
                 </Card>
               </Col>
