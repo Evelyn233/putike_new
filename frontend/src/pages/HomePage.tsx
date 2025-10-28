@@ -165,7 +165,7 @@ const HomePage = () => {
       description: '专业的Feekr品牌标题生成智能体，由腾讯元器提供支持，打造符合品牌调性的标题',
       capabilities: ['品牌标题', '智能生成', '风格定制', '点击优化'],
       isExternal: true,
-      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/giNyNq?appid=1980487321538287168&experience=true'
+      externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/uKtAAr?appid=1983113539579839424&experience=true'
     },
     feekrIntroGenerator: {
       id: 'feekr-intro-generator',
