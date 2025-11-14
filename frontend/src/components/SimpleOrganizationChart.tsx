@@ -166,6 +166,18 @@ const SimpleOrganizationChart: React.FC = () => {
           externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/WeHSfY?appid=1980477689380362432&experience=true'
         },
         {
+          id: 'feekr-full-workflow',
+          name: 'Feekr全文工作流助手',
+          role: 'Feekr全文工作流助手',
+          specialization: '全文创作专家',
+          department: 'creation',
+          avatar: '📝',
+          description: '专业的全文创作工作流助手，提供从选题到成文的完整创作流程支持，提升内容创作效率',
+          capabilities: ['全文创作', '工作流程', '内容优化', '效率提升'],
+          isExternal: true,
+          externalUrl: 'https://www.coze.cn/store/agent/7566177207887413290?bot_id=true'
+        },
+        {
           id: 'traffic-capture-1',
           name: '流量捕获',
           role: '流量捕获',

@@ -191,6 +191,18 @@ const HomePage = () => {
       isExternal: true,
       externalUrl: 'https://yuanqi.tencent.com/webim/#/chat/IWjiGJ?appid=1980513123539008256&experience=true'
     },
+    feekrFullWorkflow: {
+      id: 'feekr-full-workflow',
+      name: 'Feekr全文工作流助手',
+      role: 'Feekr全文工作流助手',
+      specialization: '全文创作专家',
+      department: 'creation',
+      avatar: '📝',
+      description: '专业的全文创作工作流助手，提供从选题到成文的完整创作流程支持，提升内容创作效率',
+      capabilities: ['全文创作', '工作流程', '内容优化', '效率提升'],
+      isExternal: true,
+      externalUrl: 'https://www.coze.cn/store/agent/7566177207887413290?bot_id=true'
+    },
     trafficCapture: {
       id: 'traffic-capture',
       name: '流量捕获',
@@ -1185,6 +1197,66 @@ const HomePage = () => {
                     fontSize: '0.9rem'
                   }}>
                     腾讯元器
+                  </Text>
+                </Card>
+              </Col>
+              <Col xs={24} sm={12} md={6}>
+                <Card
+                  hoverable
+                  onClick={() => handleAgentClick(orgAgents.feekrFullWorkflow)}
+                  style={{
+                    background: 'linear-gradient(135deg, rgba(240, 147, 251, 0.25) 0%, rgba(245, 87, 108, 0.25) 100%)',
+                    border: '2px solid rgba(245, 87, 108, 0.8)',
+                    borderRadius: '16px',
+                    textAlign: 'center',
+                    height: '200px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    backdropFilter: 'blur(20px)',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 8px 32px rgba(245, 87, 108, 0.4)',
+                    cursor: 'pointer',
+                    position: 'relative'
+                  }}
+                  bodyStyle={{ padding: '30px 20px' }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '12px',
+                    right: '12px',
+                    background: 'linear-gradient(45deg, #f093fb, #f5576c)',
+                    color: '#fff',
+                    fontSize: '0.7rem',
+                    padding: '4px 10px',
+                    borderRadius: '12px',
+                    fontWeight: 'bold',
+                  }}>
+                    外部
+                  </div>
+                  <div style={{ 
+                    fontSize: '2.5rem', 
+                    marginBottom: '15px',
+                    color: '#f093fb'
+                  }}>
+                    📝
+                  </div>
+                  <Text style={{ 
+                    color: '#ffffff', 
+                    fontSize: '1.1rem',
+                    fontWeight: '600',
+                    marginBottom: '8px',
+                    display: 'block',
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word'
+                  }}>
+                    Feekr全文工作流助手
+                  </Text>
+                  <Text style={{ 
+                    color: '#cccccc', 
+                    fontSize: '0.9rem'
+                  }}>
+                    全文创作专家
                   </Text>
                 </Card>
               </Col>
